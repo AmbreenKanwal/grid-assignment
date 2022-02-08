@@ -10,7 +10,8 @@ main{
     display: grid;
     grid-gap: 10px;
     grid-template-columns:repeat(4,1fr);
-    grid-template-rows:50px 300px 100px 60px;
+   /* grid-template-rows:50px 300px 100px 60px;*/
+   grid-auto-rows: minmax(60px,auto);
 
 
 
@@ -22,7 +23,7 @@ main{
 .div2{background-color:blue;}
 .div3{background-color:gold;}
 .div4{background-color: green;}
-.div5{background-color: purple;}
+.nested{background-color: rgb(238, 101, 238);}
 .div6{background-color: coral;}
 .div1{
     font-size: 30px;
@@ -41,26 +42,29 @@ main{
 
     
 }
-.div5{
+.nested{
     grid-column: 1/ -1;
 }
 
 .div6{
     grid-column: 1/ -1;
+    font-size: 25px;
+    
 }
 
-.list{
+.nested{
     display: grid;
-    grid-template-columns:repeat(5
-    ,200px);
-    grid-gap:10px;
-    height: 60px;
-    justify-content: space-around;
+    grid-template-columns:repeat(5,100px);
+    grid-auto-rows: 70px;
+    grid-gap: 10px;
+    justify-content: space-evenly;
     
     
 }
 
-.list div{
-    background-color: rgb(122, 1, 1);
-    
+.nested div{
+    background-color: rgb(70, 12, 12);
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
 }
